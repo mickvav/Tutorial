@@ -1,3 +1,4 @@
+
 function getmax3(arrey) {
   let newArray = arrey;
 
@@ -10,18 +11,19 @@ return newArray;
 }
 
 
- console.log(getmax3([5, 1, 8, 10, 4, 90, 1, 92, 93, 3]));
+ console.log(getmax3([1, 2, 3, 4, 5,    5, 4, 3, 2, 1]));
 
 
 
- 
+
  function getmax4(arrey) {
 
    for (let i = 0; i < 4; i += 1) {
      let biggestNumber = Math.max(...arrey);
-     arrey.pop(biggestNumber);
+     let position = arrey.indexOf(biggestNumber);
+     arrey.splice(position, 1);
    }
    return arrey;
  }
 
-console.log(getmax4([1, 2, 3, 90, 91, 92]));
+console.log(getmax4([1, 2, 3, 4, 5,      5, 4, 3, 2, 1]));
